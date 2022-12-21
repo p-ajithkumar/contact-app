@@ -19,6 +19,12 @@ export class ContactManagerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getAllContact()
+  }
+
+  //creating a saparate method to get all contacts
+  getAllContact()
+  {
     this.api.getAllcontacts().subscribe((data:any)=>{console.log(data);
       this.allContacts=data
     })
@@ -29,5 +35,13 @@ export class ContactManagerComponent implements OnInit {
     console.log(a.target.value);
     this.searchKey=a.target.value
     
+  }
+
+  deleteContact(contactId:any)//calling the deleteContact function inside api.ts
+  {
+this.api.deleteContact(contactId).subscribe((data:any)=>{
+  //contact now deleted successfully now we can redirect
+  this.getAllContact()
+}) 
   }
 }

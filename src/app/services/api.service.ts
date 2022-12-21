@@ -47,6 +47,12 @@ return this.a.get(this.baseUrl)
 return this.a.post(this.baseUrl,a) //a will be added to api(base url)
  }
 
+ //function to delete a new contact to server
 
+ deleteContact(b:any)
+ {
+return this.a.delete(`${this.baseUrl}/${b}`) //b is the contact id and deleted from api(base url)
+//here baseurl is is a variable so in backtik
+ }
 
 }

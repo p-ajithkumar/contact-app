@@ -51,7 +51,7 @@
                 <!-- edit -->
                 <a routerLink="/contacts/edit/:contactId" class="btn btn-warning mt-1">  <i class="fa-sharp fa-solid fa-pen"></i>  </a>
             <!-- delete -->
-            <button routerLink="/contacts/edit/:contactId" class="btn btn-danger mt-1">  <i class="fa-sharp fa-solid fa-trash"></i>  </button>
+            <button (click)="deleteContact(contact.id)" class="btn btn-danger mt-1">  <i class="fa-sharp fa-solid fa-trash"></i>  </button>
 
             </div>
 
