@@ -55,4 +55,9 @@ return this.a.delete(`${this.baseUrl}/${b}`) //b is the contact id and deleted f
 //here baseurl is is a variable so in backtik
  }
 
+ updateContact(cid:any,cb:any)
+ {
+   //calling api to update existing contact
+   return this.a.put(`${this.baseUrl}/${cid}`,cb)
+ }
 }
